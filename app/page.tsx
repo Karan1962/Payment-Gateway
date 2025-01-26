@@ -48,11 +48,11 @@ const PaymentPage = () => {
     }
   };
   return (
-    <div>
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100 dark:bg-black ">
       <Script src="https://checkout.razorpay.com/v1/checkout.js" />
-      <div>
-        <h1>Payment Page</h1>
-        <p>Amount to pay : {AMOUNT} INR</p>
+      <div className="p-6 bg-white dark:bg-slate-800 rounded-lg shadow-md">
+        <h1 className="text-2xl font-bold mb-4">Payment Page</h1>
+        <p className="mb-4">Amount to pay : {AMOUNT} INR</p>
         <button
           onClick={handlePayment}
           disabled={isProcessing}
